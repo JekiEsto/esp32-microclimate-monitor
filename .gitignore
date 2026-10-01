@@ -1,0 +1,20 @@
+# Сборка ESP-IDF
+build/
+sdkconfig
+sdkconfig.old
+*.bin
+*.elf
+*.map
+managed_components/
+dependencies.lock
+
+# Локальные настройки IDE
+.vscode/
+.idea/
+.vs/
+*.swp
+
+# Секреты и журналы
+.env
+secrets.h
+*.log
