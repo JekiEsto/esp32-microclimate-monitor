@@ -30,6 +30,7 @@ void app_main(void)
 
         /* Отчёт по микроклимату */
         climate_update(temperature, humidity);
+        network_send(temperature, humidity);
 
         display_show(temperature, humidity, climate_status_code());
         vTaskDelay(pdMS_TO_TICKS(APP_PERIOD_MS));
