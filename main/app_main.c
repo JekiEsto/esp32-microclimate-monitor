@@ -29,7 +29,7 @@ void app_main(void)
         sensors_read(&temperature, &humidity);
 
         /* Отчёт по микроклимату */
-        // TODO: добавить обработку показаний и отправку на сервер
+        network_send(temperature, humidity);
 
         display_show(temperature, humidity, climate_status_code());
         vTaskDelay(pdMS_TO_TICKS(APP_PERIOD_MS));
